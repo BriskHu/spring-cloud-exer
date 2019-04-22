@@ -4,4 +4,5 @@ Eureka 注册中心的服务端程序很简单。如果只需要实现基本的�
 2. 在配置中心中配置好eureka.instance.hostname等属性即可。
 
 注意因为这个服务是注册中心的server，所以配置文件中“eureka.client.register-with-eureka”和
-“eureka.client.fetch-registry”都设成false。
+“eureka.client.fetch-registry”都设成false。另外“eureka.service-url.default-zone”不要和
+“eureka.client.service-url.default-zone”搞混了。

@@ -1,4 +1,4 @@
-package com.briskhu.eurekaserver;
+package com.briskhu.eureka.server;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
