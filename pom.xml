@@ -13,6 +13,7 @@
         <module>eureka-server</module>
         <module>eureka-client01</module>
         <module>eureka-client02</module>
+        <module>zuul-service</module>
     </modules>
 
     <parent>
