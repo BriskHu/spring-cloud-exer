@@ -3,7 +3,7 @@
 **注意：** 
 使用Zuul作为网关服务时，需要在项目的pom中导入Eureka-client的包，也即Zuul服务要作为一个Eureka 的client。在springboot2.0.3以后
 Eureka client的依赖是“”。在pom中导入这个依赖后，只需要在配置文件中增加一个“eureka.client.service-
-url.defaultZone=http://localhost:9002/eureka/”配置即可。这里的“http://localhost:9002/eureka/”Eureka 注册中心服务端
+url.defaultZone=http://localhost:9002/eureka/” 配置即可。这里的“http://localhost:9002/eureka/” 是Eureka 注册中心服务端
 的地址。
 
 
