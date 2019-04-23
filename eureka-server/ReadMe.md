@@ -7,4 +7,7 @@ Eureka 注册中心的服务端程序很简单。如果只需要实现基本的�
 “eureka.client.fetch-registry”都设成false。eureka.client.register-with-eureka是配置是否要注册到
 Eureka。由于自己就是服务器，不需要注册到自己，所以设为false。eureka.client.fetch-registry是指是否从
 注册中兴获取注册信息。由于自己就是服务器，不需要从服务器获取注册信息，所以设为false。
-另外“eureka.service-url.default-zone”不要和“eureka.client.service-url.default-zone”搞混了。
+
+另外“eureka.service-url.default-zone”不要和“eureka.client.service-url.default-zone”搞混了。虽然这里
+使用eureka.service-url.default-zone和eureka.client.service-url.default-zone都是可以的。因为对于Eureka来说，
+注册中心的Server也是客户端，它和Client互为客户端。
