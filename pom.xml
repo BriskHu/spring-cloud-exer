@@ -14,6 +14,9 @@
         <module>eureka-client01</module>
         <module>eureka-client02</module>
         <module>zuul-service</module>
+        <module>loadbalance-service</module>
+        <module>order-service1</module>
+        <module>order-service2</module>
     </modules>
 
     <parent>

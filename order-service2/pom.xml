@@ -10,9 +10,9 @@
     </parent>
 
     <groupId>com.briskhu</groupId>
-    <artifactId>order-service1</artifactId>
+    <artifactId>order-service2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>order-service1</name>
+    <name>order-service2</name>
     <description>The client project for load balance with Ribbon</description>
 
     <properties>

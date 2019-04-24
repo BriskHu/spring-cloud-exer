@@ -1,4 +1,4 @@
-package com.briskhu.order.service1;
+package com.briskhu.order.service2;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class OrderService1ApplicationTests {
+public class OrderService2ApplicationTests {
 
     @Test
     public void contextLoads() {

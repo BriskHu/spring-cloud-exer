@@ -24,7 +24,7 @@ public class OrderController {
     @GetMapping("/hello")
     public ResponseEntity<String> hello(){
         LOGGER.info("[hello] 入参：无入参。");
-        return new ResponseEntity<>("Hello from order-sevice 1", HttpStatus.OK);
+        return new ResponseEntity<>("Hello from order-sevice 2", HttpStatus.OK);
     }
 
 }

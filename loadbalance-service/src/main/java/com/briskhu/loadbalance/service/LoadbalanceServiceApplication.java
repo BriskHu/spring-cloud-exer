@@ -13,6 +13,7 @@ public class LoadbalanceServiceApplication {
 
     /**
      * 使用负载均衡的 RestTemplate。
+     * 加了注解@LoadBalance之后，这个restTemplate实例就具有负载均衡的能力。
      * @return
      */
     @Bean
