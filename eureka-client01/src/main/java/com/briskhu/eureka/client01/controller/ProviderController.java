@@ -29,6 +29,7 @@ public class ProviderController {
      */
     @GetMapping("/isWorking")
     public ResponseEntity<String> isWorking(){
+        LOGGER.info("[isWorking] 入参：无入参。");
         return new ResponseEntity<>("The eureka-client01 service is performing now.", HttpStatus.OK);
     }
 
