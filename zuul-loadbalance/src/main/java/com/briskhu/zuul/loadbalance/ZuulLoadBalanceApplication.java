@@ -1,4 +1,4 @@
-package com.briskhu.zuul.service;
+package com.briskhu.zuul.loadbalance;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 @EnableZuulProxy
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ZuulServiceApplication {
+public class ZuulLoadBalanceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ZuulServiceApplication.class, args);
+        SpringApplication.run(ZuulLoadBalanceApplication.class, args);
     }
 
 }
