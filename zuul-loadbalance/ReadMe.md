@@ -32,10 +32,8 @@ zuul.routes.service02-url.path=/service02/**
 zuul.routes.service02-url.url=http://localhost:9004/
 ```
 
-只要path和serviceId是成对出现的即可，比如上例中，所有“/service01/** ”过来的请求都会转发到service01这个服务上。
-而所有“http://localhost:9003/”过来的请求也都会转发到“/service01/** ”这个路径上，从而转发到service01这个服务
-上。注意，这里的“zuul.routes.service01.path=/service01/** ”的“/service01/** ”中的service01最好是与对应服务
-项目的spring.application.name的值保持一致。否则，可能会报找不到服务的错。
+只要path和serviceId是成对出现的即可，比如上例中，所有“/service01/** ”过来的请求都会转发到service01这个服务上。而所有“http://localhost:9003/”
+过来的请求也都会转发到“/service01/**”这个路径上，从而转发到service01这个服务上。
 
 完成上述路由配置后，既可以通过serviceId的方式来进行跳转访问服务，也可以通过url的方式来跳转。
 

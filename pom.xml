@@ -17,6 +17,7 @@
         <module>loadbalance-service</module>
         <module>order-service1</module>
         <module>order-service2</module>
+        <module>zuul-loadbalance</module>
     </modules>
 
     <parent>
