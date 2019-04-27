@@ -8,6 +8,8 @@
 选择调用合适的服务实例进行具体的业务处理。
 
 ### 实现步骤
+涉及的模块：loadbalance-service、order-service1、order-service2。
+
 1. 创建负载均衡服务 
 
 要点有两个：配置主类；增加controller，管理需要进行负载均衡的接口。
