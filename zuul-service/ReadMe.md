@@ -32,10 +32,38 @@ zuul.routes.service02-url.path=/service02/**
 zuul.routes.service02-url.url=http://localhost:9004/
 ```
 
-只要path和serviceId是成对出现的即可，比如上例中，所有“/service01/** ”过来的请求都会转发到service01这个服务上。
-而所有“http://localhost:9003/”过来的请求也都会转发到“/service01/** ”这个路径上，从而转发到service01这个服务
-上。注意，这里的“zuul.routes.service01.path=/service01/** ”的“/service01/** ”中的service01最好是与对应服务
-项目的spring.application.name的值保持一致。否则，可能会报找不到服务的错。
+上述示例配置，显示了两种配置：通过path配置路由、通过url配置路由。
+
+### 通过path配置路由
+
+这种方式需要配置service-id和path两项。 配置项 ``` zuul.routes.service01.service-id=service01 ```表示需要进行
+路由的组件的名字。其中等号后面的名字应该是需要进行路由的组件的spring.application.name的值。等号前面的
+“service01”是任意设定的一个名字，用于在配置文件中表明当前是配置的哪个zuul.routes节点。配置项
+ ```  zuul.routes.service01.path=/service01/** ``` 表示该zuul.routes节点对应的请求路径。等号后面是这个
+ zuul.routes节点具体的路径，等号前面的“service01”需要与前一项“zuul.routes.service01.service-id=service01”
+ 中等候左边的service01保持一致。这样一组的两个配置项就完成一个zuul.routes节点的path路由配置。
+
+### 通过url配置路由
+
+这种方式需要配置url和path两项。配置项 ``` zuul.routes.service01-url.url=http://localhost:9003/ ``` 表示需要进行路由的
+组件的原始服务路径。等号左边的"service01-url"指定当前配置的是哪个zuul.routes节点。等号右边的url路径是组件的原始
+服务路径。配置项 ``` zuul.routes.service01-url.path=/service01/** ``` 表示该zuul.routes节点通过zuul管理后的
+服务路径。通过这两个配置项实现将原来 http://localhost:9003/ 下的所有请求转换到现在zuul服务路径下"/service01/"
+的全部请求。
+
+
+
+上述示例配置中，zuul.routes配置后面的service01或service02可以是任意值，只要path和serviceId是成对出现的即可。
+比如上例中，所有“/service01/** ”过来的请求都会转发到service01这个服务上。而所有“http://localhost:9003/”过
+来的请求也都会转发到“/service01/** ”这个路径上，从而转发到service01这个服务上。注意，这里的
+“zuul.routes.service01.service-id=service01”中的service01与对应服务项目的spring.application.name的值保
+持一致。否则，可能会报找不到服务的错。
+
+注意：在配置网关时，要注意
+“zuul.routes.loadbalance.path=/LOaDBALANCE/**”这个属性配置的是url请求路径。也就是说，所有以当前项目的
+请求路径前缀+这个路径的请求都会交给这个“loadbalance”组件进行处理。比如本练习项目的请求前缀为
+“http://localhost:9009”，则所有以“http://localhost:9009/LOaDBALANCE/”开头的请求都会交给这个“loadbalance”
+组件进行处理。
 
 完成上述路由配置后，既可以通过serviceId的方式来进行跳转访问服务，也可以通过url的方式来跳转。
 
