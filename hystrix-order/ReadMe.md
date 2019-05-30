@@ -1,0 +1,2 @@
+# Hystrix 演示项目之Order Service
+本项目是服务消费方。在Hystrix演示项目的服务提供方奔溃时，服务调用方将会得到熔断器提供的fallback方法设定的内容。
